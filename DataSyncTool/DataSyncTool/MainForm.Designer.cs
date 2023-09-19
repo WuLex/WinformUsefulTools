@@ -48,18 +48,20 @@ namespace DataSyncTool
             this.targetPasswordTextBox = new Sunny.UI.UITextBox();
             this.sourceConnectButton = new Sunny.UI.UIButton();
             this.targetConnectButton = new Sunny.UI.UIButton();
-            this.uiLabel1 = new Sunny.UI.UILabel();
-            this.uiLabel2 = new Sunny.UI.UILabel();
-            this.uiLabel3 = new Sunny.UI.UILabel();
-            this.uiLabel4 = new Sunny.UI.UILabel();
-            this.uiLabel5 = new Sunny.UI.UILabel();
-            this.uiLabel6 = new Sunny.UI.UILabel();
+            this.uisourceServerLabel = new Sunny.UI.UILabel();
+            this.uisourceUsernameLabel = new Sunny.UI.UILabel();
+            this.uisourcePasswordLabel = new Sunny.UI.UILabel();
+            this.uitargetPasswordLabel = new Sunny.UI.UILabel();
+            this.uitargetUsernameLabel = new Sunny.UI.UILabel();
+            this.uitargetServerLabel = new Sunny.UI.UILabel();
+            this.uiStartSchedulerButton = new Sunny.UI.UIButton();
+            this.uiStopSchedulerButton = new Sunny.UI.UIButton();
             this.SuspendLayout();
             // 
             // labelSourceDb
             // 
             this.labelSourceDb.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelSourceDb.Location = new System.Drawing.Point(57, 270);
+            this.labelSourceDb.Location = new System.Drawing.Point(57, 360);
             this.labelSourceDb.Name = "labelSourceDb";
             this.labelSourceDb.Size = new System.Drawing.Size(114, 43);
             this.labelSourceDb.TabIndex = 0;
@@ -72,12 +74,12 @@ namespace DataSyncTool
             this.comboBoxSourceDb.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.comboBoxSourceDb.FillColor = System.Drawing.Color.White;
             this.comboBoxSourceDb.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBoxSourceDb.Location = new System.Drawing.Point(178, 270);
+            this.comboBoxSourceDb.Location = new System.Drawing.Point(178, 358);
             this.comboBoxSourceDb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxSourceDb.MinimumSize = new System.Drawing.Size(63, 0);
             this.comboBoxSourceDb.Name = "comboBoxSourceDb";
             this.comboBoxSourceDb.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.comboBoxSourceDb.Size = new System.Drawing.Size(271, 43);
+            this.comboBoxSourceDb.Size = new System.Drawing.Size(281, 45);
             this.comboBoxSourceDb.TabIndex = 1;
             this.comboBoxSourceDb.Text = "-请选择数据库-";
             this.comboBoxSourceDb.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -87,9 +89,9 @@ namespace DataSyncTool
             // labelTargetDb
             // 
             this.labelTargetDb.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTargetDb.Location = new System.Drawing.Point(467, 268);
+            this.labelTargetDb.Location = new System.Drawing.Point(466, 358);
             this.labelTargetDb.Name = "labelTargetDb";
-            this.labelTargetDb.Size = new System.Drawing.Size(133, 45);
+            this.labelTargetDb.Size = new System.Drawing.Size(135, 47);
             this.labelTargetDb.TabIndex = 2;
             this.labelTargetDb.Text = "目标数据库：";
             this.labelTargetDb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -100,7 +102,7 @@ namespace DataSyncTool
             this.comboBoxTargetDb.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.comboBoxTargetDb.FillColor = System.Drawing.Color.White;
             this.comboBoxTargetDb.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBoxTargetDb.Location = new System.Drawing.Point(607, 268);
+            this.comboBoxTargetDb.Location = new System.Drawing.Point(607, 358);
             this.comboBoxTargetDb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxTargetDb.MinimumSize = new System.Drawing.Size(63, 0);
             this.comboBoxTargetDb.Name = "comboBoxTargetDb";
@@ -115,7 +117,7 @@ namespace DataSyncTool
             // labelSourceTable
             // 
             this.labelSourceTable.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelSourceTable.Location = new System.Drawing.Point(96, 336);
+            this.labelSourceTable.Location = new System.Drawing.Point(96, 426);
             this.labelSourceTable.Name = "labelSourceTable";
             this.labelSourceTable.Size = new System.Drawing.Size(75, 43);
             this.labelSourceTable.TabIndex = 4;
@@ -127,12 +129,12 @@ namespace DataSyncTool
             this.comboBoxSourceTable.DataSource = null;
             this.comboBoxSourceTable.FillColor = System.Drawing.Color.White;
             this.comboBoxSourceTable.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBoxSourceTable.Location = new System.Drawing.Point(178, 336);
+            this.comboBoxSourceTable.Location = new System.Drawing.Point(178, 424);
             this.comboBoxSourceTable.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxSourceTable.MinimumSize = new System.Drawing.Size(63, 0);
             this.comboBoxSourceTable.Name = "comboBoxSourceTable";
             this.comboBoxSourceTable.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.comboBoxSourceTable.Size = new System.Drawing.Size(271, 43);
+            this.comboBoxSourceTable.Size = new System.Drawing.Size(281, 45);
             this.comboBoxSourceTable.TabIndex = 5;
             this.comboBoxSourceTable.Text = "-请选择数据表-";
             this.comboBoxSourceTable.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,7 +143,7 @@ namespace DataSyncTool
             // labelTargetTable
             // 
             this.labelTargetTable.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTargetTable.Location = new System.Drawing.Point(504, 334);
+            this.labelTargetTable.Location = new System.Drawing.Point(504, 424);
             this.labelTargetTable.Name = "labelTargetTable";
             this.labelTargetTable.Size = new System.Drawing.Size(96, 45);
             this.labelTargetTable.TabIndex = 6;
@@ -154,7 +156,7 @@ namespace DataSyncTool
             this.comboBoxTargetTable.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.comboBoxTargetTable.FillColor = System.Drawing.Color.White;
             this.comboBoxTargetTable.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBoxTargetTable.Location = new System.Drawing.Point(607, 334);
+            this.comboBoxTargetTable.Location = new System.Drawing.Point(607, 424);
             this.comboBoxTargetTable.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxTargetTable.MinimumSize = new System.Drawing.Size(63, 0);
             this.comboBoxTargetTable.Name = "comboBoxTargetTable";
@@ -168,27 +170,27 @@ namespace DataSyncTool
             // buttonSync
             // 
             this.buttonSync.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonSync.Location = new System.Drawing.Point(394, 546);
+            this.buttonSync.Location = new System.Drawing.Point(376, 494);
             this.buttonSync.MinimumSize = new System.Drawing.Size(1, 1);
             this.buttonSync.Name = "buttonSync";
-            this.buttonSync.Size = new System.Drawing.Size(309, 53);
+            this.buttonSync.Size = new System.Drawing.Size(322, 53);
             this.buttonSync.TabIndex = 8;
             this.buttonSync.Text = "开始同步";
+            this.buttonSync.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSync.Click += new System.EventHandler(this.buttonSync_Click);
             // 
             // resultRichTextBox
             // 
             this.resultRichTextBox.FillColor = System.Drawing.Color.White;
             this.resultRichTextBox.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.resultRichTextBox.Location = new System.Drawing.Point(38, 669);
+            this.resultRichTextBox.Location = new System.Drawing.Point(57, 566);
             this.resultRichTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.resultRichTextBox.MinimumSize = new System.Drawing.Size(1, 1);
             this.resultRichTextBox.Name = "resultRichTextBox";
             this.resultRichTextBox.Padding = new System.Windows.Forms.Padding(2);
             this.resultRichTextBox.ShowText = false;
-            this.resultRichTextBox.Size = new System.Drawing.Size(947, 250);
+            this.resultRichTextBox.Size = new System.Drawing.Size(912, 180);
             this.resultRichTextBox.TabIndex = 9;
-            this.resultRichTextBox.Text = "resultRichTextBox";
             this.resultRichTextBox.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // sourceServerTextBox
@@ -201,7 +203,7 @@ namespace DataSyncTool
             this.sourceServerTextBox.Name = "sourceServerTextBox";
             this.sourceServerTextBox.Padding = new System.Windows.Forms.Padding(5);
             this.sourceServerTextBox.ShowText = false;
-            this.sourceServerTextBox.Size = new System.Drawing.Size(271, 46);
+            this.sourceServerTextBox.Size = new System.Drawing.Size(281, 46);
             this.sourceServerTextBox.TabIndex = 0;
             this.sourceServerTextBox.Text = "127.0.0.1";
             this.sourceServerTextBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -218,7 +220,7 @@ namespace DataSyncTool
             this.sourceUsernameTextBox.Name = "sourceUsernameTextBox";
             this.sourceUsernameTextBox.Padding = new System.Windows.Forms.Padding(5);
             this.sourceUsernameTextBox.ShowText = false;
-            this.sourceUsernameTextBox.Size = new System.Drawing.Size(271, 46);
+            this.sourceUsernameTextBox.Size = new System.Drawing.Size(281, 46);
             this.sourceUsernameTextBox.TabIndex = 1;
             this.sourceUsernameTextBox.Text = "sa";
             this.sourceUsernameTextBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,11 +233,13 @@ namespace DataSyncTool
             this.sourcePasswordTextBox.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sourcePasswordTextBox.Location = new System.Drawing.Point(178, 204);
             this.sourcePasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sourcePasswordTextBox.MaxLength = 32;
             this.sourcePasswordTextBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.sourcePasswordTextBox.Name = "sourcePasswordTextBox";
             this.sourcePasswordTextBox.Padding = new System.Windows.Forms.Padding(5);
+            this.sourcePasswordTextBox.PasswordChar = '*';
             this.sourcePasswordTextBox.ShowText = false;
-            this.sourcePasswordTextBox.Size = new System.Drawing.Size(271, 46);
+            this.sourcePasswordTextBox.Size = new System.Drawing.Size(281, 46);
             this.sourcePasswordTextBox.TabIndex = 2;
             this.sourcePasswordTextBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.sourcePasswordTextBox.Watermark = "";
@@ -281,9 +285,11 @@ namespace DataSyncTool
             this.targetPasswordTextBox.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.targetPasswordTextBox.Location = new System.Drawing.Point(607, 204);
             this.targetPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.targetPasswordTextBox.MaxLength = 32;
             this.targetPasswordTextBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.targetPasswordTextBox.Name = "targetPasswordTextBox";
             this.targetPasswordTextBox.Padding = new System.Windows.Forms.Padding(5);
+            this.targetPasswordTextBox.PasswordChar = '*';
             this.targetPasswordTextBox.ShowText = false;
             this.targetPasswordTextBox.Size = new System.Drawing.Size(308, 46);
             this.targetPasswordTextBox.TabIndex = 5;
@@ -294,99 +300,121 @@ namespace DataSyncTool
             // sourceConnectButton
             // 
             this.sourceConnectButton.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sourceConnectButton.Location = new System.Drawing.Point(219, 428);
+            this.sourceConnectButton.Location = new System.Drawing.Point(214, 272);
             this.sourceConnectButton.MinimumSize = new System.Drawing.Size(1, 1);
             this.sourceConnectButton.Name = "sourceConnectButton";
-            this.sourceConnectButton.Size = new System.Drawing.Size(190, 55);
+            this.sourceConnectButton.Size = new System.Drawing.Size(200, 55);
             this.sourceConnectButton.TabIndex = 6;
-            this.sourceConnectButton.Text = "连接源数据库";
-            this.sourceConnectButton.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sourceConnectButton.Text = "加载源数据库";
             this.sourceConnectButton.Click += new System.EventHandler(this.sourceConnectButton_Click);
             // 
             // targetConnectButton
             // 
             this.targetConnectButton.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.targetConnectButton.Location = new System.Drawing.Point(680, 428);
+            this.targetConnectButton.Location = new System.Drawing.Point(657, 272);
             this.targetConnectButton.MinimumSize = new System.Drawing.Size(1, 1);
             this.targetConnectButton.Name = "targetConnectButton";
             this.targetConnectButton.Size = new System.Drawing.Size(200, 55);
             this.targetConnectButton.TabIndex = 7;
-            this.targetConnectButton.Text = "连接目标数据库";
-            this.targetConnectButton.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.targetConnectButton.Text = "加载目标数据库";
             this.targetConnectButton.Click += new System.EventHandler(this.targetConnectButton_Click);
             // 
-            // uiLabel1
+            // uisourceServerLabel
             // 
-            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uiLabel1.Location = new System.Drawing.Point(69, 80);
-            this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(102, 46);
-            this.uiLabel1.TabIndex = 10;
-            this.uiLabel1.Text = "源服务器:";
-            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uisourceServerLabel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uisourceServerLabel.Location = new System.Drawing.Point(73, 80);
+            this.uisourceServerLabel.Name = "uisourceServerLabel";
+            this.uisourceServerLabel.Size = new System.Drawing.Size(98, 46);
+            this.uisourceServerLabel.TabIndex = 10;
+            this.uisourceServerLabel.Text = "源服务器:";
+            this.uisourceServerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // uiLabel2
+            // uisourceUsernameLabel
             // 
-            this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uiLabel2.Location = new System.Drawing.Point(89, 136);
-            this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(82, 46);
-            this.uiLabel2.TabIndex = 11;
-            this.uiLabel2.Text = "用户名:";
-            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uisourceUsernameLabel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uisourceUsernameLabel.Location = new System.Drawing.Point(87, 136);
+            this.uisourceUsernameLabel.Name = "uisourceUsernameLabel";
+            this.uisourceUsernameLabel.Size = new System.Drawing.Size(84, 46);
+            this.uisourceUsernameLabel.TabIndex = 11;
+            this.uisourceUsernameLabel.Text = "用户名:";
+            this.uisourceUsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // uiLabel3
+            // uisourcePasswordLabel
             // 
-            this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uiLabel3.Location = new System.Drawing.Point(111, 204);
-            this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(60, 46);
-            this.uiLabel3.TabIndex = 12;
-            this.uiLabel3.Text = "密码:";
-            this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uisourcePasswordLabel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uisourcePasswordLabel.Location = new System.Drawing.Point(106, 204);
+            this.uisourcePasswordLabel.Name = "uisourcePasswordLabel";
+            this.uisourcePasswordLabel.Size = new System.Drawing.Size(65, 46);
+            this.uisourcePasswordLabel.TabIndex = 12;
+            this.uisourcePasswordLabel.Text = "密码:";
+            this.uisourcePasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // uiLabel4
+            // uitargetPasswordLabel
             // 
-            this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uiLabel4.Location = new System.Drawing.Point(535, 204);
-            this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(65, 46);
-            this.uiLabel4.TabIndex = 15;
-            this.uiLabel4.Text = "密码:";
-            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uitargetPasswordLabel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uitargetPasswordLabel.Location = new System.Drawing.Point(530, 204);
+            this.uitargetPasswordLabel.Name = "uitargetPasswordLabel";
+            this.uitargetPasswordLabel.Size = new System.Drawing.Size(70, 46);
+            this.uitargetPasswordLabel.TabIndex = 15;
+            this.uitargetPasswordLabel.Text = "密码:";
+            this.uitargetPasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // uiLabel5
+            // uitargetUsernameLabel
             // 
-            this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uiLabel5.Location = new System.Drawing.Point(513, 136);
-            this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(77, 46);
-            this.uiLabel5.TabIndex = 14;
-            this.uiLabel5.Text = "用户名:";
-            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uitargetUsernameLabel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uitargetUsernameLabel.Location = new System.Drawing.Point(513, 136);
+            this.uitargetUsernameLabel.Name = "uitargetUsernameLabel";
+            this.uitargetUsernameLabel.Size = new System.Drawing.Size(77, 46);
+            this.uitargetUsernameLabel.TabIndex = 14;
+            this.uitargetUsernameLabel.Text = "用户名:";
+            this.uitargetUsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // uiLabel6
+            // uitargetServerLabel
             // 
-            this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uiLabel6.Location = new System.Drawing.Point(475, 80);
-            this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(125, 46);
-            this.uiLabel6.TabIndex = 13;
-            this.uiLabel6.Text = "目标服务器:";
-            this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uitargetServerLabel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uitargetServerLabel.Location = new System.Drawing.Point(475, 80);
+            this.uitargetServerLabel.Name = "uitargetServerLabel";
+            this.uitargetServerLabel.Size = new System.Drawing.Size(125, 46);
+            this.uitargetServerLabel.TabIndex = 13;
+            this.uitargetServerLabel.Text = "目标服务器:";
+            this.uitargetServerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiStartSchedulerButton
+            // 
+            this.uiStartSchedulerButton.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uiStartSchedulerButton.Location = new System.Drawing.Point(178, 776);
+            this.uiStartSchedulerButton.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiStartSchedulerButton.Name = "uiStartSchedulerButton";
+            this.uiStartSchedulerButton.Size = new System.Drawing.Size(281, 53);
+            this.uiStartSchedulerButton.TabIndex = 16;
+            this.uiStartSchedulerButton.Text = "启动调度程序";
+            this.uiStartSchedulerButton.Click += new System.EventHandler(this.uiStartSchedulerButton_Click);
+            // 
+            // uiStopSchedulerButton
+            // 
+            this.uiStopSchedulerButton.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uiStopSchedulerButton.Location = new System.Drawing.Point(607, 776);
+            this.uiStopSchedulerButton.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiStopSchedulerButton.Name = "uiStopSchedulerButton";
+            this.uiStopSchedulerButton.Size = new System.Drawing.Size(308, 53);
+            this.uiStopSchedulerButton.TabIndex = 17;
+            this.uiStopSchedulerButton.Text = "停止调度程序";
+            this.uiStopSchedulerButton.Click += new System.EventHandler(this.uiStopSchedulerButton_Click);
             // 
             // MainForm
             // 
-            this.ClientSize = new System.Drawing.Size(1034, 949);
-            this.Controls.Add(this.uiLabel4);
-            this.Controls.Add(this.uiLabel5);
-            this.Controls.Add(this.uiLabel6);
-            this.Controls.Add(this.uiLabel3);
-            this.Controls.Add(this.uiLabel2);
-            this.Controls.Add(this.uiLabel1);
+            this.ClientSize = new System.Drawing.Size(1048, 877);
+            this.Controls.Add(this.uiStopSchedulerButton);
+            this.Controls.Add(this.uiStartSchedulerButton);
+            this.Controls.Add(this.uitargetPasswordLabel);
+            this.Controls.Add(this.uitargetUsernameLabel);
+            this.Controls.Add(this.uitargetServerLabel);
+            this.Controls.Add(this.sourcePasswordTextBox);
+            this.Controls.Add(this.uisourcePasswordLabel);
+            this.Controls.Add(this.uisourceUsernameLabel);
+            this.Controls.Add(this.uisourceServerLabel);
             this.Controls.Add(this.sourceServerTextBox);
             this.Controls.Add(this.sourceUsernameTextBox);
-            this.Controls.Add(this.sourcePasswordTextBox);
             this.Controls.Add(this.targetServerTextBox);
             this.Controls.Add(this.targetUsernameTextBox);
             this.Controls.Add(this.targetPasswordTextBox);
@@ -405,6 +433,7 @@ namespace DataSyncTool
             this.Name = "MainForm";
             this.Text = "数据同步工具";
             this.ZoomScaleRect = new System.Drawing.Rectangle(19, 19, 667, 567);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -433,11 +462,13 @@ namespace DataSyncTool
 
         #endregion
 
-        private UILabel uiLabel1;
-        private UILabel uiLabel2;
-        private UILabel uiLabel3;
-        private UILabel uiLabel4;
-        private UILabel uiLabel5;
-        private UILabel uiLabel6;
+        private UILabel uisourceServerLabel;
+        private UILabel uisourceUsernameLabel;
+        private UILabel uisourcePasswordLabel;
+        private UILabel uitargetPasswordLabel;
+        private UILabel uitargetUsernameLabel;
+        private UILabel uitargetServerLabel;
+        private UIButton uiStartSchedulerButton;
+        private UIButton uiStopSchedulerButton;
     }
 }
