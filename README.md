@@ -22,3 +22,7 @@
 ### 如图
 
 ![code](https://raw.githubusercontent.com/WuLex/UsefulPicture/main/winformtools/datasynctool/mainform.png)
+
+## 3.点击自动工具
+### 如图
+![code](https://raw.githubusercontent.com/WuLex/UsefulPicture/main/winformtools/clickautomation/mainform.png)
